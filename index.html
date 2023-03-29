@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Calculator</title>
+	<script type="text/javascript">
+		function myFunction(num)   
+        {  
+            document.getElementById("number").value += num;
+        } 
+        function clr()
+        {
+            document.getElementById("number").value = "";
+        }
+        function sqrt1()
+        {
+        	document.getElementById("number").value = Math.sqrt(document.getElementById("number").value) ;
+        }
+        function equal()  
+		{   
+			document.getElementById("number").value = eval(document.getElementById("number").value)  
+		}   
+		function backspace()  
+		{  
+			var a = document.getElementById("number").value;  
+			document.getElementById("number").value = a.substring(0, a.length - 1);  
+        }
+
+	</script>
+	<style type="text/css">
+     div{
+     	background-color : rgb(11, 213, 232) ;
+			height:305px;
+			padding:18px;
+			width: 240px;
+			margin-left:200px;
+			margin-right: 200px;
+            margin-top: 150px;
+			border-radius: 15px;
+     }
+     .out{
+     	background-color: rgb(16, 12, 12);
+        width: 188px;
+        padding: 10px;
+        margin-bottom: 25px;
+        color: white;
+     }
+     .top{
+     	border-radius: 25px;
+     	background-color: #bce7e3;
+     	height:40px;
+     	width:45px;
+     	border-width: 0px;
+     }
+     .right{
+     	border-radius: 25px;
+     	color: rgb(12, 10, 10);
+     	background-color: #bce7e3;
+     	height:40px;
+     	width:47px;
+     	border-width: 0px;
+     }
+     .down{
+     	border-radius: 25px;
+     	color: rgb(14, 12, 12);
+     	background-color: #bce7e3;
+     	height:40px;
+     	width:45px;
+     	border-width: 0px;
+     }
+     .zero{
+     	border-radius: 25px;
+     	color: rgb(11, 10, 10);
+     	background-color: #bce7e3;
+     	height:40px;
+     	width:100px;
+     	border-width: 0px;
+     }
+     td{
+     	height:20px;
+     	width:20px
+     }
+      
+
+
+	</style>
+</head>
+<body>
+	<center>
+     <div>
+     	<table>
+     		<tr><td colspan="4"><input id="number" class="out" type = "text" name="txt"></td></tr>
+     		<tr>
+     			<td><input class="top" type = "button" value = "C" onclick ="clr()"></td>
+     			<td><input class="top" type = "button" value = "B" onclick ="backspace('B')"></td>
+     			<td><input class="top" type = "button" value = "%" onclick ="myFunction('%')"></td>
+     			<td><input class="right" type = "button" value = "/" onclick ="myFunction('/')"></td>
+     		</tr>
+     		<tr>
+     			<td><input  class="down" type = "button" value = "7" onclick ="myFunction(7)"></td>
+     			<td><input class="down" type = "button" value = "8" onclick ="myFunction(8)"></td>
+     			<td><input class="down" type = "button" value = "9" onclick ="myFunction(9)"></td>
+     			<td><input class="right" type = "button" value = "+" onclick ="myFunction('+')"></td>
+     		</tr>
+     		<tr>
+     			<td><input class="down" type = "button" value = "4" onclick ="myFunction(4)"></td>
+     			<td><input class="down" type = "button" value = "5" onclick ="myFunction(5)"></td>
+     			<td><input class="down" type = "button" value = "6" onclick ="myFunction(6)"></td>
+     			<td><input class="right" type = "button" value = "-" onclick ="myFunction('-')"></td>
+     		</tr>
+     		<tr>
+     			<td><input class="down" type = "button" value = "1" onclick ="myFunction(1)"></td>
+     			<td><input class="down" type = "button" value = "2" onclick ="myFunction(2)"></td>
+     			<td><input class="down" type = "button" value = "3" onclick ="myFunction(3)"></td>
+     			<td><input class="right" type = "button" value = "x" onclick ="myFunction('*')"></td>
+     		</tr>
+     		<tr>
+     			<td colspan="2"><input class="zero" type = "button" value = "0" onclick ="myFunction(0)"></td>
+     			<td><input class="down" type = "button" value = "." onclick ="myFunction('.')"></td>
+     			<td><input class="right" type = "button" value = "=" onclick ="equal('=')"></td>
+     		</tr>
+     	</table>
+     </div>
+ </center>
+</body>
+</html>
